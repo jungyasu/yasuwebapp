@@ -1,5 +1,3 @@
-//BrentAureli.com
-//Author: Brent Aureli
 //NodeJS Server
 
 //Initialize our Express Web framework.
