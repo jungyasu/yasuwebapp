@@ -12,7 +12,7 @@ var io = require('socket.io')(http);
 var path = require('path');
 
 //get our port # from c9's enviromental variable: PORT
-var port = process.env.PORT || 80;
+var port = process.env.PORT;
 
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
