@@ -12,14 +12,14 @@ var io = require('socket.io')(http);
 var path = require('path');
 
 //get our port # from c9's enviromental variable: PORT
-var port = process.env.PORT;
+var port = process.env.PORT || 80;
 
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var morgan = require('morgan');
-// var multer = require('multer');
+var multer = require('multer');
 var passport = require('passport');
 var flash = require('connect-flash');
 var MongoStore = require('connect-mongo')(session);
@@ -43,7 +43,7 @@ app.set('views', path.resolve(__dirname, 'client', 'views'));
 //ex: libs/bootstrap/bootstrap.css in our html actually points to client/libs/bootstrap/bootstrap.css
 app.use(express.static(path.resolve(__dirname, 'client')));
 //
-// app.use(multer({dest: './uploads/'}).single('file'));
+app.use(multer({dest: './uploads/'}).single('file'));
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -93,25 +93,25 @@ io.on('connection', function(socket) {
 
 
 //set our first route
-app.get('/', function(req, res) {
-  res.render('index.ejs');
-});
+// app.get('/', function(req, res) {
+//   res.render('index.ejs');
+// });
 
 var api = express.Router();
 require('./server/routes/api')(api);
 app.use('/api', api);
 
 var auth = express.Router();
-require('./app/routes/auth')(auth, passport);
+require('./server/routes/auth')(auth, passport);
 app.use('/auth', auth);
 
 var secure = express.Router();
-require('./app/routes/secure')(secure);
+require('./server/routes/secure')(secure);
 app.use('/', secure);
 
-app.get('/*', function(req, res) {
-  res.render('index.ejs');
-});
+// app.get('/*', function(req, res) {
+//   res.render('index.ejs');
+// });
 
 //make our app listen for incoming requests on the port assigned above
 http.listen(port, function() {
