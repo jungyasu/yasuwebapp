@@ -43,18 +43,11 @@
               <li ng-class="{active: isActive('/home')}"><a href="/home">Home</a></li>
               <li ng-class="{active: isActive('/about')}"><a href="/about">About Me</a></li>
               <li ng-class="{active: isActive('/projects')}"><a href="/projects">Project Snippets</a></li>
-              <li><a href="/auth/logout" target="_self">Logout</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
-      <div class="jumbotron text-center">
-        <h1><span class="fa fa-lock"></span> Node Authentication</h1>
 
-        <p>Login or Register with:</p>
-        <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
-        <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
-      </div>
       <!-- Main component for a primary marketing message or call to action -->
       <div class="container-fluid">
         <div ng-view></div>

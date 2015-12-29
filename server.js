@@ -1,3 +1,5 @@
+//BrentAureli.com
+//Author: Brent Aureli
 //NodeJS Server
 
 //Initialize our Express Web framework.
@@ -16,13 +18,6 @@ var port = process.env.PORT;
 
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
-var cookieParser = require('cookie-parser');
-var session = require('express-session');
-var morgan = require('morgan');
-var multer = require('multer');
-var passport = require('passport');
-var flash = require('connect-flash');
-var MongoStore = require('connect-mongo')(session);
 
 //setup, configure, and connect to MongoDB
 var mongoose = require('mongoose');
@@ -42,20 +37,6 @@ app.set('views', path.resolve(__dirname, 'client', 'views'));
 //serve static files from client folder.
 //ex: libs/bootstrap/bootstrap.css in our html actually points to client/libs/bootstrap/bootstrap.css
 app.use(express.static(path.resolve(__dirname, 'client')));
-//
-app.use(multer({dest: './uploads/'}).single('file'));
-app.use(morgan('dev'));
-app.use(cookieParser());
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(session({secret: 'anystringoftext',
-         saveUninitialized: true,
-         resave: true,
-         store: new MongoStore({ mongooseConnection: mongoose.connection,
-                      ttl: 2 * 24 * 60 * 60 })}));
-
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
 
 var users = [];
 io.on('connection', function(socket) {
@@ -93,25 +74,17 @@ io.on('connection', function(socket) {
 
 
 //set our first route
-// app.get('/', function(req, res) {
-//   res.render('index.ejs');
-// });
+app.get('/', function(req, res) {
+  res.render('index.ejs');
+});
 
 var api = express.Router();
 require('./server/routes/api')(api);
 app.use('/api', api);
 
-var auth = express.Router();
-require('./server/routes/auth')(auth, passport);
-app.use('/auth', auth);
-
-var secure = express.Router();
-require('./server/routes/secure')(secure);
-app.use('/', secure);
-
-// app.get('/*', function(req, res) {
-//   res.render('index.ejs');
-// });
+app.get('/*', function(req, res) {
+  res.render('index.ejs');
+});
 
 //make our app listen for incoming requests on the port assigned above
 http.listen(port, function() {
