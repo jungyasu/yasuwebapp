@@ -1,4 +1,16 @@
-	<section id="main-slider">
+	
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <carousel interval="myInterval">
+          <slide ng-repeat="slide in slides" active="slide.active">
+              <a href="{{slide.link}}">
+                  <img ng-src="{{slide.image}}" style="margin:auto;">
+              </a>
+          </slide>
+        </carousel>        
+    </div>
+</div>
+<section id="main-slider">
 	<div class="owl-carousel">
 	  <div class="item" style="background-image: url(img/big-head2.png); background-size: auto 66%; background-position: right; background-color: rgba(105,210,231,0.5);">
 	    <div class="slider-inner">
