@@ -21,9 +21,9 @@ var flash = require('connect-flash');
 var MongoStore = require('connect-mongo')(session);
 
 
-var configDB = require('./config/database.js');
+var configDB = require('./server/config/database.js');
 mongoose.connect(configDB.url);
-require('./config/passport')(passport);
+require('./server/config/passport')(passport);
 
 // app.use(express.static(__dirname + '/client'));
 app.use(multer({dest: './uploads/'}).single('file'));
