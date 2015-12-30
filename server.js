@@ -1,7 +1,7 @@
 
 var express = require('express');
 var app = express();
-var port = process.env.PORT;
+var port = process.env.PORT || 80;
 // var client = require('twilio')('AC865ec649a1314b3ddf4d064ad71a0310', '34c061a68f84bfed2ee2fa51e7fe33b3');
 
 var http = require('http').Server(app);
