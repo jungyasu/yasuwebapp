@@ -1,5 +1,5 @@
 var Customer = require('../models/customer');
-module.exports = function(router){
+module.exports = function(router, passport){
     router.post('/customers', function(req, res){
         console.log(req.body);
         var customer = new Customer();
@@ -66,5 +66,18 @@ module.exports = function(router){
         });
     });
     
+
+    router.get('/testAPI', function(req, res, next){
+        if(req.query.access_token) next();
+        else next('route');
+    },
+    passport.authenticate('bearer', { session: false }),
+        function(req, res){
+        res.json({ SecretData: 'abc123', Authenticated: true });
+    });
+
+    router.get('/testAPI', function(req, res){
+        res.json({ SecretData: 'abc123', Authenticated: false });
+    });
     
 }

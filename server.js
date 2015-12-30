@@ -102,7 +102,7 @@ io.on('connection', function(socket) {
 // });
 
 var api = express.Router();
-require('./server/routes/api')(api);
+require('./server/routes/api')(api, passport);
 app.use('/api', api);
 
 var auth = express.Router();
