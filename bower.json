@@ -8,7 +8,7 @@
   "license": "MIT",
   "homepage": "http://jungyasu.com",
   "dependencies": {
-    "angularjs": "latest",
+    "angularjs": "1.2.15",
     "angular-bootstrap": "latest",
     "angular-resource" : "latest",
     "angular-animate" : "latest",
