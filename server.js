@@ -58,24 +58,25 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 //     });
 //   }); 
 
-app.get('/', function(req, res){
-    res.render('index.ejs');
-  });
+// app.get('/', function(req, res){
+//     res.render('index.ejs');
+//   });
+
 // var public_router = express.Router();
 // require('./app/routes/public.js')(public_router);
 // app.use('/public', public_router);
 
-// var api = express.Router();
-// require('./app/routes/api.js')(api, passport);
-// app.use('/api', api);
+var api = express.Router();
+require('./app/routes/api.js')(api, passport);
+app.use('/api', api);
 
-// var auth = express.Router();
-// require('./app/routes/auth.js')(auth, passport);
-// app.use('/auth', auth);
+var auth = express.Router();
+require('./app/routes/auth.js')(auth, passport);
+app.use('/auth', auth);
 
-// var secure = express.Router();
-// require('./app/routes/secure.js')(secure);
-// app.use('/', secure);
+var secure = express.Router();
+require('./app/routes/secure.js')(secure);
+app.use('/', secure);
 
 io.on('connection', function(socket){
   console.log('a user connected');
