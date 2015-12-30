@@ -4,8 +4,8 @@ var GoogleStrategy   = require('passport-google-oauth').OAuth2Strategy;
 var BearerStrategy   = require('passport-http-bearer').Strategy;
 
 
-var User             = require('../app/models/user').User;
-var Token            = require('../app/models/user').Token;
+var User             = require('../models/user').User;
+var Token            = require('../models/user').Token;
 var configAuth = require('./auth');
 
 module.exports = function(passport) {

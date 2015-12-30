@@ -23,7 +23,7 @@ var MongoStore = require('connect-mongo')(session);
 
 var configDB = require('./server/config/database.js');
 mongoose.connect(configDB.url);
-require('./server/config/passport')(passport);
+require('./server/config/passport.js')(passport);
 
 
 app.set('view engine', 'ejs');
