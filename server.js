@@ -105,13 +105,13 @@ var api = express.Router();
 require('./server/routes/api')(api, passport);
 app.use('/api', api);
 
-var auth = express.Router();
-require('./server/routes/auth.js')(auth, passport);
-app.use('/auth', auth);
+// var auth = express.Router();
+// require('./server/routes/auth.js')(auth, passport);
+// app.use('/auth', auth);
 
-var secure = express.Router();
-require('./server/routes/secure.js')(secure);
-app.use('/', secure);
+// var secure = express.Router();
+// require('./server/routes/secure.js')(secure);
+// app.use('/', secure);
 
 
 //make our app listen for incoming requests on the port assigned above
