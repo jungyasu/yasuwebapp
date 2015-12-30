@@ -27,7 +27,7 @@ require('./server/config/passport')(passport);
 
 
 app.set('view engine', 'ejs');
-// app.set('views', path.resolve(__dirname + '/client', 'views'));
+app.set('views', path.resolve(__dirname + '/client', 'views'));
 
 
 app.use(express.static(__dirname + '/client'));
