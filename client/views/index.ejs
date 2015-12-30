@@ -54,11 +54,6 @@
           </div>
           <div class="navbar-custom-menu" ng-controller="navController">
             <ul class="nav navbar-nav">
-              <li ng-class="{active: isActive('/home')}"><a href="/home">Home</a></li>
-              <li ng-class="{active: isActive('/about')}"><a href="/about">About Me</a></li>
-              <li ng-class="{active: isActive('/projects')}"><a href="/projects">Project Snippets</a></li>
-            </ul>
-            <ul class="nav navbar-nav">
               <!-- Messages: style can be found in dropdown.less-->
               <li class="dropdown messages-menu hidden">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-envelope-o"></i> <span class="label label-success">1</span> </a>
@@ -210,21 +205,9 @@
             <li class="treeview">
               <a href="#"> <i class="fa fa-tasks"></i> <span>Resource</span> <i class="fa fa-angle-left pull-right"></i> </a>
               <ul class="treeview-menu">
-                <li class="">
-                  <a href="resume.php"><i class="fa fa-list"></i> Resume</a>
-                </li>
-                <li class="">
-                  <a href="portfolio.php"><i class="fa fa-cubes"></i> Portfolio</a>
-                </li>
-                <li class="">
-                  <a href="schedule.php"><i class="fa fa-calendar"></i> Schedule</a>
-                </li>
-                <li class="">
-                  <a href="downloads.php"><i class="fa fa-download"></i> Downloads</a>
-                </li>
-                <li class="">
-                  <a href="demos.php"><i class="fa fa-desktop"></i> Demos</a>
-                </li>
+                <li ng-class="{active: isActive('/home')}"><a href="/home">Home</a></li>
+                <li ng-class="{active: isActive('/about')}"><a href="/about">About Me</a></li>
+                <li ng-class="{active: isActive('/projects')}"><a href="/projects">Project Snippets</a></li>
               </ul>
             </li>
             <li class="treeview">
