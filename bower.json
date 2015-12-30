@@ -11,6 +11,7 @@
     "angularjs": "latest",
     "angular-bootstrap": "latest",
     "angular-resource" : "latest",
+    "angular-animate" : "latest",
     "font-awesome": "latest",
     "angular-route": "latest",
     "angular-socket-io": "latest",
