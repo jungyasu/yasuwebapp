@@ -12,6 +12,7 @@
     "bootstrap": "latest",
 	"font-awesome": "latest",
     "angular-route": "latest",
+    "angular-animate": "latest",
     "angular-bootstrap": "latest",
     "angular-resource": "latest",
     "angular-sanitize": "latest",
