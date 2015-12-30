@@ -112,20 +112,20 @@ io.on('connection', function(socket) {
   })
 });
 
-io.on('connection', function(socket){
-  console.log('a user connected');
-  socket.on('disconnect', function(){
-    console.log('user disconnected');
-  });
-  //Test messages by sending a message every 1 second.
-  var i = 0;
-  setInterval(function(){
-  	socket.emit('message', {
-  		message: i
-  	});
-  	i++;
-  }, 1000);
-});
+// io.on('connection', function(socket){
+//   console.log('a user connected');
+//   socket.on('disconnect', function(){
+//     console.log('user disconnected');
+//   });
+//   //Test messages by sending a message every 1 second.
+//   var i = 0;
+//   setInterval(function(){
+//   	socket.emit('message', {
+//   		message: i
+//   	});
+//   	i++;
+//   }, 1000);
+// });
 
 
 
