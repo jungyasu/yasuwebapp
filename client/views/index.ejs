@@ -28,12 +28,32 @@
     <!-- customize css -->
     <link rel="stylesheet" href="css/jys.css">
 
+<!-- iCheck -->
+<link rel="stylesheet" href="../plugins/iCheck/flat/blue.css">
+<!-- bootstrap wysihtml5 - text editor -->
+<link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+<!-- fullCalendar 2.2.5-->
+<link rel="stylesheet" href="../plugins/fullcalendar/fullcalendar.min.css">
+<link rel="stylesheet" href="../plugins/fullcalendar/fullcalendar.print.css" media="print">
+<!-- DataTables -->
+<link rel="stylesheet" href="/plugins/datatables/dataTables.bootstrap.css">
+<!-- in your header -->
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+    <link href="dist/css/owl.carousel.css" rel="stylesheet">
+    <link href="dist/css/owl.transitions.css" rel="stylesheet">
+    <link href="dist/css/prettyPhoto.css" rel="stylesheet">
+    <link href="dist/css/main.css" rel="stylesheet">
+    <link href="dist/css/responsive.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 
   </head>
 
   <body class="hold-transition skin-black-light sidebar-mini sidebar-collapse">
 
     <div class="wrapper">
+      <!-- Return to Top -->
+      <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 
       <header class="main-header">
         <!-- Logo -->
@@ -176,13 +196,636 @@
         </nav>
       </header>
       
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar" style="position:fixed;">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                  <i class="fa fa-search"></i>
+                </button> </span>
+            </div>
+          </form>
+          <!-- /.search form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <li class="header">
+              MAIN NAVIGATION
+            </li>
+            <li class="active treeview">
+              <a href="index.php"><i class="fa fa-home"></i> <span>Home</span></a>
+            </li>
+            <li class="treeview">
+              <a href="#"> <i class="fa fa-tasks"></i> <span>Resource</span> <i class="fa fa-angle-left pull-right"></i> </a>
+              <ul class="treeview-menu">
+                <li class="">
+                  <a href="resume.php"><i class="fa fa-list"></i> Resume</a>
+                </li>
+                <li class="">
+                  <a href="portfolio.php"><i class="fa fa-cubes"></i> Portfolio</a>
+                </li>
+                <li class="">
+                  <a href="schedule.php"><i class="fa fa-calendar"></i> Schedule</a>
+                </li>
+                <li class="">
+                  <a href="downloads.php"><i class="fa fa-download"></i> Downloads</a>
+                </li>
+                <li class="">
+                  <a href="demos.php"><i class="fa fa-desktop"></i> Demos</a>
+                </li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="contact.php"> <i class="fa fa-send"></i> <span>Contact</span></a>
+            </li>
+            <li class="treeview">
+              <a href="#"> <i class="fa fa-cogs"></i> <span>Account</span> <i class="fa fa-angle-left pull-right"></i> </a>
+              <ul class="treeview-menu">
+                <li class="">
+                  <a href="setting.php"><i class="fa fa-cogs"></i> Setting</a>
+                </li>
+                <li class="">
+                  <a href="http://192.168.0.179"><i class="fa fa-sign-in"></i> Login</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Main Page added by Yasu -->
+      <div class="">
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+
+          <section id="main-slider">
+            <div class="owl-carousel">
+              <div class="item" style="background-image: url(dist/img/big-head2.png); background-size: auto 66%; background-position: right; background-color: rgba(105,210,231,0.5);">
+                <div class="slider-inner">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="carousel-content">
+                          <h2><span>Welcome to <b>JUNG</b>YASU.COM</span></h2>
+                          <br>
+                          <h3> It's nice to meet you </h3>
+                          <a class="btn btn-default btn-lg" href="#">Read More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!--/.item-->
+              <div class="item" style="background-image: url(dist/img/big-head2.png); background-size: auto 66%; background-position: right; background-color: rgba(243,134,48,0.5);">
+                <div class="slider-inner">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="carousel-content">
+                          <h2>I am a <span>Software Developer</span></h2>
+                          <br>
+                          <h3> Web, Database, Automation, HMI, Applications </h3>
+                          <a class="btn btn-default btn-lg" href="#">Read More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!--/.item-->
+            </div><!--/.owl-carousel-->
+          </section><!--/#main-slider-->
+
+          <!-- Content Header (Page header) -->
+          <section class="content-header container animated fadeInDown padding2">
+            <h1> Home <small> Welcome to my web profile</small></h1>
+            <ol class="breadcrumb">
+              <li class="active">
+                <a href="#"><i class="fa fa-home"></i> </a>
+              </li>
+              <!-- <li class="active">
+              Home
+              </li> -->
+            </ol>
+          </section>
+
+          <section id="services" class="">
+            <div class="container">
+
+              <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">Yoseok Yasu, Jung</h2>
+                <p class="text-center wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                  Enthusiatic Technical Support Engineer with 3 years proven troubleshooting experience
+                </p>
+              </div>
+
+              <div class="row">
+                <div class="features">
+                  <div class="col-md-4 col-sm-6 wow fadeInUp animated padding2" data-wow-duration="300ms" data-wow-delay="0ms" style="visibility: visible; animation-duration: 300ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                    <div class="media service-box">
+                      <div class="pull-left">
+                        <i class="fa fa-html5"></i>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading"><b>Web development</b></h4>
+                        <p>
+                          HTML5, CSS3, Javascript, PHP
+                        </p>
+                      </div>
+                    </div>
+                  </div><!--/.col-md-4-->
+
+                  <div class="col-md-4 col-sm-6 wow fadeInUp animated padding2" data-wow-duration="300ms" data-wow-delay="100ms" style="visibility: visible; animation-duration: 300ms; animation-delay: 100ms; animation-name: fadeInUp;">
+                    <div class="media service-box">
+                      <div class="pull-left">
+                        <i class="fa fa-cubes"></i>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading"><b>GUI Programming</b></h4>
+                        <p>
+                          Qt, wxWidgets
+                        </p>
+                      </div>
+                    </div>
+                  </div><!--/.col-md-4-->
+
+                  <div class="col-md-4 col-sm-6 wow fadeInUp animated padding2" data-wow-duration="300ms" data-wow-delay="200ms" style="visibility: visible; animation-duration: 300ms; animation-delay: 200ms; animation-name: fadeInUp;">
+                    <div class="media service-box">
+                      <div class="pull-left">
+                        <i class="fa fa-database"></i>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading"><b>Database</b></h4>
+                        <p>
+                          Structured Query Language(SQL)
+                        </p>
+                      </div>
+                    </div>
+                  </div><!--/.col-md-4-->
+
+                  <div class="col-md-4 col-sm-6 wow fadeInUp animated padding2" data-wow-duration="300ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 300ms; animation-delay: 300ms; animation-name: fadeInUp;">
+                    <div class="media service-box">
+                      <div class="pull-left">
+                        <i class="fa fa-windows"></i>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading"><b>MS Office Proficient</b></h4>
+                        <p>
+                          Word, Power Point, Access, Excel Visual Basic for Applications
+                        </p>
+                      </div>
+                    </div>
+                  </div><!--/.col-md-4-->
+
+                  <div class="col-md-4 col-sm-6 wow fadeInUp animated padding2" data-wow-duration="300ms" data-wow-delay="400ms" style="visibility: visible; animation-duration: 300ms; animation-delay: 400ms; animation-name: fadeInUp;">
+                    <div class="media service-box">
+                      <div class="pull-left">
+                        <i class="fa fa-language"></i>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading"><b>Multi-Language</b></h4>
+                        <p>
+                          English, Korean, German
+                        </p>
+                      </div>
+                    </div>
+                  </div><!--/.col-md-4-->
+
+                  <div class="col-md-4 col-sm-6 wow fadeInUp animated padding2" data-wow-duration="300ms" data-wow-delay="500ms" style="visibility: visible; animation-duration: 300ms; animation-delay: 500ms; animation-name: fadeInUp;">
+                    <div class="media service-box">
+                      <div class="pull-left">
+                        <i class="fa fa-sitemap"></i>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading"><b>Automation</b></h4>
+                        <p>
+                          Serial Communication in C++, Autobase HMI/SCADA
+                        </p>
+                      </div>
+                    </div>
+                  </div><!--/.col-md-4-->
+                </div>
+              </div><!--/.row-->
+            </div><!--/.container-->
+          </section>
+
+          <section id="cta" class="wow fadeIn">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-9">
+                  <h2>Research Interests</h2>
+                  <p>
+                    Software Engineering, Machine Learning, Image Processing, Computer Vision, Artificial Neural Networks, Data Science, Evolutionary Algorithms, Automation, Human Machine Interface, Bioinformatics.
+                  </p>
+                </div>
+                <div class="col-sm-3 text-right">
+                  <a class="btn btn-default btn-lg btn-flat" href="#">Check Now!</a>
+                </div>
+              </div>
+            </div>
+          </section><!--/#cta-->
+
+          <section id="features">
+            <div class="container">
+              <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Professional Skills</h2>
+                <p class="text-center wow fadeInDown">
+                  You are in a state of constant learning.
+                </p>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-7">
+                  <h3 class="column-title">Language and Platform Skills</h3>
+                  <div class="progress">
+                    <div data-placement="top" style="width: 80%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar progress-bar-aqua">
+                      <span class="sr-only">80%</span>
+                      <span class="progress-type"><i class="fa fa-file-excel-o"></i> MS Excel Visual Basic for Application(VBA)</span>
+                    </div>
+                    <!-- <span class="progress-type"><i class="fa fa-file-excel-o"></i> MS Excel Visual Basic for Application(VBA)</span> -->
+                  </div>
+                  <div class="progress">
+                    <div data-placement="top" style="width: 80%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" role="progressbar" class="progress-bar progress-bar-aqua">
+                      <span class="sr-only">80%</span>
+                      <span class="progress-type"><i class="fa fa-windows"></i> Autobase HMI/SCADA</span>
+                    </div>
+                  </div>
+                  <div class="progress">
+                    <div data-placement="top" style="width: 70%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="1" role="progressbar" class="progress-bar progress-bar-success">
+                      <span class="sr-only">70%</span>
+                      <span class="progress-type"><i class="devicon-html5-plain colored"></i> HTML5 / <i class="devicon-css3-plain colored"></i> CSS3 / <i class="devicon-bootstrap-plain colored"></i> Bootstrap / <i class="devicon-jquery-plain colored"></i> JQuery</span>
+                    </div>
+                  </div>
+                  <div class="progress">
+                    <div data-placement="top" style="width: 55%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="1" role="progressbar" class="progress-bar progress-bar-success">
+                      <span class="sr-only">55%</span>
+                      <span class="progress-type"><i class="devicon-javascript-plain colored"></i> Javascript / <i class="devicon-cplusplus-plain colored"></i> C++ qt</span>
+                    </div>
+                  </div>
+                  <div class="progress">
+                    <div data-placement="top" style="width: 40%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="1" role="progressbar" class="progress-bar progress-bar-warning">
+                      <span class="sr-only">40%</span>
+                      <span class="progress-type"><i class="devicon-mysql-plain colored"></i> MySQL / <i class="devicon-oracle-original colored"></i> Oracle / <i class="devicon-angularjs-plain colored"></i> AngularJS / <i class="devicon-php-plain colored"></i> PHP / <i class="devicon-nodejs-plain colored"></i> NodeJS</span>
+                    </div>
+                  </div>
+                  <div class="progress">
+                    <div data-placement="top" style="width: 30%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" role="progressbar" class="progress-bar progress-bar-warning">
+                      <span class="sr-only">30%</span>
+                      <span class="progress-type"><i class="devicon-python-plain colored"></i> Python / <i class="devicon-ruby-plain colored"></i> Ruby / <i class="devicon-java-plain colored"></i> Java / <i class="devicon-android-plain colored"></i> Android <!-- / <i class="devicon-django-plain colored"></i> Django --></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-5">
+                  <h3 class="column-title">Experiences</h3>
+                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title"><a class="" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> JAN2015 - RECENT</small> Automation Assistant &#47; HMI Developer </a></h4>
+                      </div>
+
+                      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                          <a href="#" class=""> KYOUNGIL SYSTEM </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title"><a class="" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> MAY2014 - DEC2014</small>IT Assistant </a></h4>
+                      </div>
+                      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                          <a href="#" class=""> VANWEST COLLEGE </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title"><a class="" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree"> <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> AUG2010 - JUN2012</small> Administrative Clerk </a></h4>
+                      </div>
+                      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                          <a href="#" class=""> REPUBLIC OF KOREA ARMY </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <section id="portfolio">
+            <div class="container">
+              <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Portfolio</h2>
+                <p class="text-center wow fadeInDown">
+                  The one who follows the crowd will usually go no further than the crowd. - Einstein
+                </p>
+              </div>
+
+              <div class="text-center">
+                <ul class="portfolio-filter">
+                  <li>
+                    <a class="active" href="#" data-filter="*">All Works</a>
+                  </li>
+                  <li>
+                    <a href="#" data-filter=".creative">Creative</a>
+                  </li>
+                  <li>
+                    <a href="#" data-filter=".corporate">Corporate</a>
+                  </li>
+                  <li>
+                    <a href="#" data-filter=".portfolio">Portfolio</a>
+                  </li>
+                </ul><!--/#portfolio-filter-->
+              </div>
+
+              <div class="portfolio-items">
+                <div class="portfolio-item creative">
+                  <div class="portfolio-item-inner">
+                    <img class="img-responsive" src="multi/images/portfolio/01.jpg" alt="">
+                    <div class="portfolio-info">
+                      <h3>Portfolio Item 1</h3>
+                      Lorem Ipsum Dolor Sit
+                      <a class="preview" href="multi/images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                    </div>
+                  </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item corporate portfolio">
+                  <div class="portfolio-item-inner">
+                    <img class="img-responsive" src="multi/images/portfolio/02.jpg" alt="">
+                    <div class="portfolio-info">
+                      <h3>Portfolio Item 2</h3>
+                      Lorem Ipsum Dolor Sit
+                      <a class="preview" href="multi/images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                    </div>
+                  </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item creative">
+                  <div class="portfolio-item-inner">
+                    <img class="img-responsive" src="multi/images/portfolio/03.jpg" alt="">
+                    <div class="portfolio-info">
+                      <h3>Portfolio Item 3</h3>
+                      Lorem Ipsum Dolor Sit
+                      <a class="preview" href="multi/images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                    </div>
+                  </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item corporate">
+                  <div class="portfolio-item-inner">
+                    <img class="img-responsive" src="multi/images/portfolio/04.jpg" alt="">
+                    <div class="portfolio-info">
+                      <h3>Portfolio Item 4</h3>
+                      Lorem Ipsum Dolor Sit
+                      <a class="preview" href="multi/images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                    </div>
+                  </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item creative portfolio">
+                  <div class="portfolio-item-inner">
+                    <img class="img-responsive" src="multi/images/portfolio/05.jpg" alt="">
+                    <div class="portfolio-info">
+                      <h3>Portfolio Item 5</h3>
+                      Lorem Ipsum Dolor Sit
+                      <a class="preview" href="multi/images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                    </div>
+                  </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item corporate">
+                  <div class="portfolio-item-inner">
+                    <img class="img-responsive" src="multi/images/portfolio/06.jpg" alt="">
+                    <div class="portfolio-info">
+                      <h3>Portfolio Item 5</h3>
+                      Lorem Ipsum Dolor Sit
+                      <a class="preview" href="multi/images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                    </div>
+                  </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item creative portfolio">
+                  <div class="portfolio-item-inner">
+                    <img class="img-responsive" src="multi/images/portfolio/07.jpg" alt="">
+                    <div class="portfolio-info">
+                      <h3>Portfolio Item 7</h3>
+                      Lorem Ipsum Dolor Sit
+                      <a class="preview" href="multi/images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                    </div>
+                  </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item corporate">
+                  <div class="portfolio-item-inner">
+                    <img class="img-responsive" src="multi/images/portfolio/08.jpg" alt="">
+                    <div class="portfolio-info">
+                      <h3>Portfolio Item 8</h3>
+                      Lorem Ipsum Dolor Sit
+                      <a class="preview" href="multi/images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                    </div>
+                  </div>
+                </div><!--/.portfolio-item-->
+              </div>
+            </div><!--/.container-->
+          </section><!--/#portfolio-->
+
+          <section id="get-in-touch">
+            <div class="container">
+              <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Get in Touch</h2>
+                <p class="text-center wow fadeInDown">
+                  Get help and support from our online tools or find out how to get in touch.
+                </p>
+              </div>
+            </div>
+            <div class="text-center">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="TXTNJWJ7JBG4G">
+
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+              </form>
+            </div>
+          </section><!--/#get-in-touch-->
+
+          <section id="contact">
+            <div id="google-map" style="height:650px" data-latitude="49.27080" data-longitude="-123.16654"></div>
+            <div class="container-wrapper">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-4 col-sm-offset-8">
+                    <div class="contact-form">
+                      <h3>Contact Info</h3>
+
+                      <address>
+                        <strong>JUNGYASU, Inc.</strong>
+                        <br>
+                        1709 Stephens Street
+                        <br>
+                        Vancouver, BC V6K3V5
+                        <br>
+                        <!-- <abbr title="Phone">P:</abbr> (604) 727-2498 -->
+                      </address>
+
+                      <!-- <form id="main-contact-form" name="contact-form" method="post" action="#">
+                      <div class="form-group">
+                      <input type="text" name="name" class="form-control" placeholder="Name" required>
+                      </div>
+                      <div class="form-group">
+                      <input type="email" name="email" class="form-control" placeholder="Email" required>
+                      </div>
+                      <div class="form-group">
+                      <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                      </div>
+                      <div class="form-group">
+                      <textarea name="message" class="form-control" rows="8" placeholder="Message" required></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary">
+                      Send Message
+                      </button>
+                      </form> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!--/#bottom-->
+
+        </div><!-- /.content-wrapper -->
+
+      </div>
+      <section id="cta2">
+        <div class="container">
+          <div class="text-center">
+            <h2 ><span>EMAIL</span> ME</h2>
+            <p>
+              Thank you for your email
+            </p>
+            <p>
+              <a class="btn btn-primary btn-lg" href="#"><i class="fa fa-envelope"></i> yasu3237@gmail.com</a>
+            </p>
+            <img class="img-responsive wow fadeIn" src="multi/images/cta2/cta2-img.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
+          </div>
+        </div>
+      </section>
+
+      <footer class="main-footer">
+        <div class="container padding2">
+          <div class="social-icons" style="float:left;">
+            <a class="btn" href="https://www.facebook.com/laura.freeman.77964"><i class="fa fa-twitter"></i></a>
+            <a class="btn" href="https://twitter.com/lfreezeee"><i class="fa fa-facebook"></i></a>
+            <a class="btn" href="#"><i class="fa fa-linkedin"></i></a>
+          </div>
+          <!-- Logo -->
+          <a href="http://jungyasu.com" class="logo pull-right" style="font-size: 26px;"><!-- logo for regular state and mobile devices --> <span class="logo-lg"><b>JUNG</b>YASU</span> </a>
+          
+        </div>
+        <div class="container padding2">
+          <div class="pull-right hidden-xs">
+            <b>Version</b> 1.0.0
+          </div>
+          <strong>Copyright &copy; 2015-2016 <a href="http://jungyasu.com">Yoseok Yasu Jung</a>.</strong> All rights reserved.
+        </div>
+      </footer>
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark" style="position:fixed;">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+          <li class="active">
+            <a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a>
+          </li>
+          <li>
+            <a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <!-- Home tab content -->
+          <div class="tab-pane active" id="control-sidebar-home-tab">
+            <div class="text-center" style="font-size:32px;">
+              <p class="">
+                Supported OS
+              </p>
+              <i class="devicon-apple-original"></i>
+              <i class="devicon-windows8-original"></i>
+              <i class="devicon-ubuntu-plain"></i>
+              <i class="devicon-linux-plain"></i>
+              <i class="devicon-android-plain"></i>
+              <p class="">
+                Supported Browser
+              </p>
+              <i class="devicon-ie10-original"></i>
+              <i class="devicon-firefox-plain"></i>
+              <i class="devicon-chrome-plain"></i>
+              <i class="devicon-safari-plain"></i>
+
+            </div>
+            <hr>
+            <div class="text-center" style="font-size:32px;">
+              <p class="">
+                Connect
+              </p>
+              <i class="fa fa-github-square"></i>
+              <i class="fa fa-bitbucket-square"></i>
+              <i class="fa fa-facebook-square"></i>
+              <i class="fa fa-twitter-square"></i>
+              <hr>
+              <p class="">
+                Contact
+              </p>
+              <i class="fa fa-skype"></i>
+              <i class="fa fa-whatsapp"></i>
+            </div>
+          </div><!-- /.tab-pane -->
+          <!-- Stats tab content -->
+          <div class="tab-pane" id="control-sidebar-stats-tab">
+            Stats Tab Content
+          </div><!-- /.tab-pane -->
+          <!-- Settings tab content -->
+          <div class="tab-pane" id="control-sidebar-settings-tab">
+            <form method="post">
+              <h3 class="control-sidebar-heading">General Settings</h3>
+              <div class="form-group">
+                <label class="control-sidebar-subheading"> Report panel usage
+                  <input type="checkbox" class="pull-right" checked>
+                </label>
+                <p>
+                  Some information about this general settings option
+                </p>
+              </div><!-- /.form-group -->
+
+              <div class="form-group">
+                <label class="control-sidebar-subheading"> Delete chat history <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a> </label>
+              </div><!-- /.form-group -->
+            </form>
+          </div><!-- /.tab-pane -->
+        </div>
+      </aside><!-- /.control-sidebar -->
+      <!-- Add the sidebar's background. This div must be placed
+      immediately after the control sidebar -->
+      <div class="control-sidebar-bg"></div>
+
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="container-fluid" style="margin-top:50px;">
         <div ng-view></div>
       </div>
 
-    </div> <!-- /container -->
+    </div> <!-- /wrapper -->
     
     
     <!--Socket IO-->
@@ -197,6 +840,9 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-animate.js"></script>
     <script type="text/javascript" src="libs/angular-route/angular-route.js"></script>
     <script type="text/javascript" src="libs/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="libs/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="libs/angular-cookies/angular-cookies.js"></script>
+    <script type="text/javascript" src="libs/angular-touch/angular-touch.js"></script>
     <script type="text/javascript" src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script type="text/javascript" src="libs/angular-socket-io/socket.js"></script>
     
