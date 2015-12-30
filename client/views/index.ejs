@@ -52,7 +52,7 @@
           <div class="hidden-lg" style="float:left;">
             <a href="index.php" data-toggle="logo" style="margin-left:12px; font-size:26px; line-height:50px; letter-spacing:3px;" class="text-black"><!-- <img src="/dist/img/logo_white2.png" class="user-image bg-black" style="border-radius:50%; width:25px; height:25px; margin:12px;"> --><span><b>JUNG</b>YASU</span></a>
           </div>
-          <div class="navbar-custom-menu" ng-controller="navController">
+          <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
               <!-- Messages: style can be found in dropdown.less-->
               <li class="dropdown messages-menu hidden">
@@ -179,7 +179,7 @@
       </header>
       
       <!-- Left side column. contains the logo and sidebar -->
-      <aside class="main-sidebar" style="position:fixed;">
+      <aside class="main-sidebar" style="position:fixed;" ng-controller="navController">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
 
