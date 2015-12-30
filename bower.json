@@ -15,5 +15,8 @@
     "angular-route": "latest",
     "angular-socket-io": "latest",
     "bootstrap" : "latest"
+  },
+  "install": {
+    "path": "client/libs"
   }
 }
