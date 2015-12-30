@@ -67,15 +67,15 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 // app.use('/public', public_router);
 
 var api = express.Router();
-require('./server/app/routes/api.js')(api, passport);
+require('./server/routes/api.js')(api, passport);
 app.use('/api', api);
 
 var auth = express.Router();
-require('./server/app/routes/auth.js')(auth, passport);
+require('./server/routes/auth.js')(auth, passport);
 app.use('/auth', auth);
 
 var secure = express.Router();
-require('./server/app/routes/secure.js')(secure);
+require('./server/routes/secure.js')(secure);
 app.use('/', secure);
 
 io.on('connection', function(socket){
