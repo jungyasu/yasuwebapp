@@ -31,7 +31,7 @@
     "rand-token": "latest",
     "s3fs": "latest",
     "socket.io": "^1.3.5",
-	"twilio": "latest"
+	  "twilio": "latest"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
