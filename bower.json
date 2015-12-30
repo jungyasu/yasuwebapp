@@ -1,0 +1,25 @@
+{
+  "name": "jungyasu.com",
+  "version": "0.0.1",
+  "authors": [
+    "Jung Yasu <yasu3237@gmail.com>"
+  ],
+  "description": "jungyasu.com webapp",
+  "license": "MIT",
+  "homepage": "www.jungyasu.com",
+  "dependencies": {
+    "angular": "latest",
+    "bootstrap": "latest",
+	"font-awesome": "latest",
+    "angular-route": "latest",
+    "angular-bootstrap": "latest",
+    "angular-resource": "latest",
+    "angular-sanitize": "latest",
+    "angular-cookies": "latest",
+    "angular-touch": "latest",
+    "angular-socket-io": "latest"
+  },
+  "install": {
+    "path": "client/libs"
+  }
+}
