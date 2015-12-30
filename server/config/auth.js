@@ -16,12 +16,12 @@ module.exports = {
 	'facebookAuth' : {
 		'clientID': '1737267139819660',
 		'clientSecret': 'b72229f9f0edde9aa893bd0d739ef9cf',
-		'callbackURL': 'http://jungasystem.herokuapp.com/auth/facebook/callback'
+		'callbackURL': 'http://yasuweb.herokuapp.com/auth/facebook/callback'
 	},
 
 	'googleAuth' : {
 		'clientID': '304751209214-pu2ge2jnnc7u0ut60g3s4h56cno0prdn.apps.googleusercontent.com',
 		'clientSecret': 'jAnLGactNjQiQYwq95tp4vUU',
-		'callbackURL': 'http://jungasystem.herokuapp.com/auth/google/callback'
+		'callbackURL': 'http://yasuweb.herokuapp.com/auth/google/callback'
 	}
 }
