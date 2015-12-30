@@ -38,7 +38,8 @@ app.use(session({
                 saveUninitialized: true,
                 resave: true,
                 store: new MongoStore({ mongooseConnection: mongoose.connection,
-                      ttl: 2 * 24 * 60 * 60 }));
+                      ttl: 2 * 24 * 60 * 60 })
+              }));
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
