@@ -2,6 +2,7 @@
 
 //Initialize our Express Web framework.
 var express = require('express');
+var morgan = require('morgan');
 var app = express();
 
 //socket IO stuff
@@ -22,7 +23,7 @@ var mongoose = require('mongoose');
 var configDB = require('./server/config/database.js');
 mongoose.connect(configDB.url);
 
-
+app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(methodOverride());
 

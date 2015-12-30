@@ -21,7 +21,7 @@
     "express": "^4.12.3",
     "method-override": "^2.3.3",
     "mongoose": "^4.0.4",
-	"morgan": "latest",
+	  "morgan": "latest",
     "multer": "^1.1.0",
     "passport": "latest",
     "passport-facebook": "latest",
