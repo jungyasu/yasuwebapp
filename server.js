@@ -105,6 +105,8 @@ var api = express.Router();
 require('./server/routes/api')(api, passport);
 app.use('/api', api);
 
+require('./server/routes/routes.js')(app, passport);
+
 // var auth = express.Router();
 // require('./server/routes/auth.js')(auth, passport);
 // app.use('/auth', auth);
