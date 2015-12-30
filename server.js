@@ -4,6 +4,8 @@ var app = express();
 var port = process.env.PORT || 80;
 // var client = require('twilio')('AC865ec649a1314b3ddf4d064ad71a0310', '34c061a68f84bfed2ee2fa51e7fe33b3');
 
+var path = require('path');
+
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
@@ -23,7 +25,7 @@ var configDB = require('./config/database.js');
 mongoose.connect(configDB.url);
 require('./config/passport')(passport);
 
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/client'));
 app.use(multer({dest: './uploads/'}).single('file'));
 app.use(morgan('dev'));
 app.use(cookieParser());
@@ -39,7 +41,7 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 app.set('view engine', 'ejs');
-
+app.set('views', path.resolve(__dirname + 'client', 'views'));
 // app.get('/testtwilio', function(req, res){
 //     client.sendSms({
 //       to: '+16047272498',
@@ -53,21 +55,24 @@ app.set('view engine', 'ejs');
 //     });
 //   }); 
 
+app.get('/', function(req, res){
+    res.render('index.ejs');
+  });
 // var public_router = express.Router();
 // require('./app/routes/public.js')(public_router);
 // app.use('/public', public_router);
 
-var api = express.Router();
-require('./app/routes/api.js')(api, passport);
-app.use('/api', api);
+// var api = express.Router();
+// require('./app/routes/api.js')(api, passport);
+// app.use('/api', api);
 
-var auth = express.Router();
-require('./app/routes/auth.js')(auth, passport);
-app.use('/auth', auth);
+// var auth = express.Router();
+// require('./app/routes/auth.js')(auth, passport);
+// app.use('/auth', auth);
 
-var secure = express.Router();
-require('./app/routes/secure.js')(secure);
-app.use('/', secure);
+// var secure = express.Router();
+// require('./app/routes/secure.js')(secure);
+// app.use('/', secure);
 
 io.on('connection', function(socket){
   console.log('a user connected');

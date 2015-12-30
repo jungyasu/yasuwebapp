@@ -1,8 +1,9 @@
 var myApp = angular.module('myApp', [
 	'ngRoute',
 	'ui.bootstrap',
-	'btford.socket-io']).
-	config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
+	'btford.socket-io'])
+
+.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 		$routeProvider.when('/profile', {templateUrl: 'partials/profile.html', controller: 'profileController'});
 		$routeProvider.when('/submit', {templateUrl: 'partials/submit.html', controller: 'submitController'});
 		$routeProvider.when('/dailydose', {templateUrl: 'partials/dailydose.html', controller: 'dailydoseController'});
