@@ -24,7 +24,8 @@
     "rand-token": "latest",
     "s3fs": "latest",
     "socket.io": "latest",
-    "twilio": "latest"
+    "twilio": "latest",
+    "bower": "latest"
   },
   "devDependencies": {},
   "scripts": {
