@@ -92,13 +92,13 @@ io.on('connection', function(socket) {
 
 
 //set our first route
-app.get('/', function(req, res) {
-  res.render('index.ejs');
-});
+// app.get('/', function(req, res) {
+//   res.render('index.ejs');
+// });
 
-app.get('/*', function(req, res) {
-  res.render('index.ejs');
-});
+// app.get('/*', function(req, res) {
+//   res.render('index.ejs');
+// });
 
 var api = express.Router();
 require('./server/routes/api')(api);
