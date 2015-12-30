@@ -14,6 +14,9 @@
     "angular-route": "latest",
     "angular-bootstrap": "latest",
     "angular-resource": "latest",
+    "angular-sanitize": "latest",
+    "angular-cookies": "latest",
+    "angular-touch": "latest",
     "angular-socket-io": "latest"
   },
   "install": {
