@@ -25,6 +25,11 @@ var configDB = require('./server/config/database.js');
 mongoose.connect(configDB.url);
 require('./server/config/passport')(passport);
 
+
+app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname + '/client', 'views'));
+
+
 // app.use(express.static(__dirname + '/client'));
 app.use(multer({dest: './uploads/'}).single('file'));
 app.use(morgan('dev'));
@@ -40,8 +45,6 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
-app.set('view engine', 'ejs');
-app.set('views', path.resolve(__dirname + 'client', 'views'));
 // app.get('/testtwilio', function(req, res){
 //     client.sendSms({
 //       to: '+16047272498',
