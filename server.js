@@ -20,7 +20,7 @@ var io = require('socket.io')(http);
 var path = require('path');
 
 //get our port # from c9's enviromental variable: PORT
-var port = process.env.PORT;
+var port = process.env.PORT || 80;
 
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
@@ -46,7 +46,7 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(flahs());
+app.use(flash());
 
 
 //Set our view engine to EJS, and set the directory our views will be stored in
@@ -106,11 +106,11 @@ require('./server/routes/api')(api);
 app.use('/api', api);
 
 var auth = express.Router();
-require('./app/routes/auth.js')(auth, passport);
+require('./server/routes/auth.js')(auth, passport);
 app.use('/auth', auth);
 
 var secure = express.Router();
-require('./app/routes/secure.js')(secure);
+require('./server/routes/secure.js')(secure);
 app.use('/', secure);
 
 
